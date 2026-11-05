@@ -10,8 +10,8 @@ This is how I work with [Claude Code](https://claude.com/claude-code) as of **20
   talking to you.
 
   When you ask for it, Claude coordinates and subagents do the work in parallel,
-  each in its own git worktree. Claude merges their work, watches memory, CPU and
-  plan usage, and keeps a numbered backlog in `BACKLOG.md` and `DECISIONS.md`.
+  each in its own git worktree, routine agents on a cheaper model. Claude merges
+  their work, watches memory, CPU and plan usage, and keeps a numbered backlog in `BACKLOG.md` and `DECISIONS.md`.
 
 - **Away mode:** work keeps going while you're away, without nasty surprises when
   you return.

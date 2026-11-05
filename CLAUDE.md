@@ -43,6 +43,10 @@ talking.
   asking. On a subscription plan, check usage (`claude -p --no-session-persistence /usage`); from
   75% start fewer agents, and near the limit let running ones finish instead of starting new ones,
   so work stops at a clean point rather than mid-edit.
+- **Pick the model per agent.** Mechanical work (docs, renames, small fixes, running checks,
+  data lookups) runs on a cheaper model (`model: "sonnet"`); design, tricky logic and anything
+  the user will judge on quality stays on the strongest model. When unsure, take the cheaper
+  one and move up if it fails once.
 - **Brief agents like peers.** One agent per area, so no two edit the same files. Give the goal,
   the default branch's current commit, the exact scope and what is decided; ask for small focused
   commits and a report with commit hashes, the checks it ran with their results, and any decision
